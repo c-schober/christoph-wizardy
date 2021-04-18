@@ -1,4 +1,4 @@
-# abo-app-v2
+# Christophs Wizardy
 
 ## Project setup
 ```
@@ -10,9 +10,11 @@ yarn install
 yarn serve
 ```
 
-### Compiles and minifies for production
+### used Toolstack
 ```
-yarn build
+vuex for state management (redux pendant)
+persisted state to keep all value if hard refresh
+buefy for ui elements
 ```
 
 ### Lints and fixes files
