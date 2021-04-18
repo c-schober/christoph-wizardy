@@ -45,6 +45,7 @@ export default {
         price: 79,
       })
       this.$store.dispatch('setStep', 2)
+      this.$store.dispatch('setTotal')
     },
   },
 }

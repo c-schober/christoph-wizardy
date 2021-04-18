@@ -27,7 +27,7 @@ export default {
         return this.$store.state.donation.percentage
       },
       set(value) {
-        this.$store.dispatch('setDonation', { percentage: value })
+        this.$store.dispatch('setDonation', { percentage: parseFloat(value).toFixed(2) })
       },
     },
   },

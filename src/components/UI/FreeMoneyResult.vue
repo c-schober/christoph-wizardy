@@ -3,7 +3,9 @@
     <div class="free-money-text">
       Zusätzlich spendest du an uns
       <div class="change-wrapper">
-        <b-field class="change-value" label=""> <b-input v-model="donation" type="text"></b-input> </b-field>€
+        <b-field class="change-value" label="">
+          <b-input @blur="setDonation" :value="donation" type="text"></b-input> </b-field
+        >€
       </div>
     </div>
     <p>Dieses Geld werden wir zu 100% in Öl-Futures investieren</p>
@@ -13,13 +15,14 @@
 <script>
 export default {
   computed: {
-    donation: {
-      get() {
-        return this.$store.getters.getDonation
-      },
-      set(value) {
-        this.$store.dispatch('setDonationAmount', parseFloat(value))
-      },
+    donation() {
+      return this.$store.getters.getDonation
+    },
+  },
+
+  methods: {
+    setDonation(event) {
+      this.$store.dispatch('setDonationAmount', parseFloat(event.target.value))
     },
   },
 }
@@ -39,7 +42,7 @@ export default {
   justify-content: flex-end;
 }
 .change-value {
-  width: 60px;
-  margin-right: 5px
+  width: 75px;
+  margin-right: 5px;
 }
 </style>
