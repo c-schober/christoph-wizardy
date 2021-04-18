@@ -64,7 +64,7 @@ export const store = new Vuex.Store({
     getStep: (state) => state.step,
     getDonation: (state) => state.donation.amount,
     getPayment: (state) => state.payment,
-    getCcDetails: (state) => state.ccDetails
+    getCcDetails: (state) => state.ccDetails,
   },
   mutations: {
     setItem: (state, payload) => {
@@ -100,6 +100,10 @@ export const store = new Vuex.Store({
       state.donation.percentage = payload.percentage
       state.donation.amount = (state.cart.total * payload.percentage) / 100
     },
+    setDonationAmount: (state, payload) => {
+      state.donation.amount = payload
+      state.donation.percentage = payload * 100 / state.cart.total
+    },
     setPayment: (state, payload) => (state.payment = payload),
     setCcDetails: (state, payload) => (state.ccDetails = payload),
     setStep: (state, payload) => (state.step = payload),
@@ -134,6 +138,9 @@ export const store = new Vuex.Store({
     },
     setDonation: ({ commit }, payload) => {
       commit('setDonation', payload)
+    },
+    setDonationAmount: ({ commit }, payload) => {
+      commit('setDonationAmount', payload)
     },
     setPayment: ({ commit }, payload) => {
       commit('setPayment', payload)
