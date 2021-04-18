@@ -6,7 +6,7 @@
       </b-table-column>
 
       <b-table-column field="image" label="" v-slot="props">
-        <img width="30px" height="30px" :src="props.row.img" :alt="props.row.img" />
+        <img class="image" width="30px" height="30px" :src="props.row.img" :alt="props.row.img" />
       </b-table-column>
 
       <b-table-column field="title" label="Produkt:" v-slot="props">
@@ -91,5 +91,10 @@ export default {
   font-size: 25px;
   font-weight: 600;
   margin: 25px;
+}
+
+.image {
+  width: 30px;
+  height: 30px;
 }
 </style>
