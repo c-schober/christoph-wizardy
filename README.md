@@ -17,10 +17,6 @@ persisted state to keep all value if hard refresh
 buefy for ui elements
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+### Demo
+See https://wizardy.christoph-schober.com
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
