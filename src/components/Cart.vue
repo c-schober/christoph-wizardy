@@ -1,12 +1,12 @@
 <template>
   <section class="cart">
-    <b-table  :data="data">
+    <b-table :data="data">
       <b-table-column v-slot="props" field="del" label="" width="40">
         <a @click.prevent="changeQuantity({ quantity: 0, id: props.row.id })">X</a>
       </b-table-column>
 
       <b-table-column field="image" label="" v-slot="props">
-        <img width="30px" :src="props.row.img" :alt="props.row.img" />
+        <img width="30px" height="30px" :src="props.row.img" :alt="props.row.img" />
       </b-table-column>
 
       <b-table-column field="title" label="Produkt:" v-slot="props">

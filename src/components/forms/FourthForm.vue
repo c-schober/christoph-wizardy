@@ -7,7 +7,8 @@
       class="trash"
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Stoned_Fox.jpg/1200px-Stoned_Fox.jpg"
       alt="plastik"
-      width="400px"
+      width="200px"
+      height="250px"
     />
     <div class="button-wrapper">
       <b-button class="button is_centered" @click.prevent="resetApp" type="is-primary">App zurücksetzen</b-button>
