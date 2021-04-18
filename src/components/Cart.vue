@@ -1,6 +1,6 @@
 <template>
   <section class="cart">
-    <b-table>
+    <b-table  :data="data">
       <b-table-column v-slot="props" field="del" label="" width="40">
         <a @click.prevent="changeQuantity({ quantity: 0, id: props.row.id })">X</a>
       </b-table-column>
